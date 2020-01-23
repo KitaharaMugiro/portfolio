@@ -1,8 +1,8 @@
-import Test from "../components/Test";
+import TopPage from "../components/TopPage";
 export default () => {
   return (
     <div>
-      <Test />
+      <TopPage />
     </div>
   );
 };
