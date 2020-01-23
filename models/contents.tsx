@@ -7,11 +7,27 @@ export type content = {
   name: string;
   link: string;
   icon: Function;
+  displayAtHome: boolean;
 };
 
 export const contents: content[] = [
-  { name: "Home", link: "/", icon: () => <Home /> },
-  { name: "Profile", link: "/profile", icon: () => <AccountBoxIcon /> },
-  { name: "Products", link: "/products", icon: () => <WebIcon /> },
-  { name: "History", link: "/history", icon: () => <TimelineIcon /> }
+  { name: "Home", link: "/", icon: () => <Home />, displayAtHome: false },
+  {
+    name: "Profile",
+    link: "/profile",
+    icon: () => <AccountBoxIcon />,
+    displayAtHome: true
+  },
+  {
+    name: "Products",
+    link: "/products",
+    icon: () => <WebIcon />,
+    displayAtHome: true
+  },
+  {
+    name: "History",
+    link: "/history",
+    icon: () => <TimelineIcon />,
+    displayAtHome: true
+  }
 ];

@@ -8,19 +8,21 @@ import { catchcopy } from "../models/catchcopy";
 export default () => {
   const router = useRouter();
   const renderButtons = () => {
-    return contents.map(content => {
-      return (
-        <Box m={2}>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => router.push(content.link)}
-          >
-            {content.name}
-          </Button>
-        </Box>
-      );
-    });
+    return contents
+      .filter(content => content.displayAtHome)
+      .map(content => {
+        return (
+          <Box m={2} key={content.name}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => router.push(content.link)}
+            >
+              {content.name}
+            </Button>
+          </Box>
+        );
+      });
   };
 
   return (
