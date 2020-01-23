@@ -91,3 +91,7 @@ temp-files/
 temp-outputs/
 main/nuxt/static/s3mock/
 samples/auto-generated/
+
+# secrets
+gh-pages.pub
+gh-pages
