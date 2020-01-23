@@ -1,36 +1,66 @@
-import styled from "styled-components";
-import { Button } from "@material-ui/core";
+import { Button, Box } from "@material-ui/core";
 import { useRouter } from "next/router";
+import { contents } from "../models/contents";
+import styled from "styled-components";
+import { colors } from "../constants/colors";
+import { catchcopy } from "../models/catchcopy";
 
 export default () => {
   const router = useRouter();
   const renderButtons = () => {
-    const links = [
-      { name: "profile", to: "/profile" },
-      { name: "history", to: "/history" },
-      { name: "products", to: "/products" }
-    ];
-    return links.map(link => {
+    return contents.map(content => {
       return (
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => router.push(link.to)}
-        >
-          {link.name}
-        </Button>
+        <Box m={2}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => router.push(content.link)}
+          >
+            {content.name}
+          </Button>
+        </Box>
       );
     });
   };
 
-  return <div>{renderButtons()}</div>;
+  return (
+    <div>
+      <CenterText>
+        <MainText>{catchcopy.title}</MainText>
+        <SubText>{catchcopy.subText}</SubText>
+      </CenterText>
+      <Spacer />
+      <Spacer />
+      <Spacer />
+      <Center>
+        <Box display="flex" flexDirection="row">
+          {renderButtons()}
+        </Box>
+      </Center>
+      <Spacer />
+    </div>
+  );
 };
 
-const OriginalButton = styled.button`
-  color: palevioletred;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
+const MainText = styled.h1`
+  color: ${colors.mainTextBlack};
+`;
+
+const SubText = styled.h3`
+  color: ${colors.subTextBlack};
+`;
+
+const CenterText = styled.div`
+  text-align: center;
+`;
+
+const Center = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+`;
+
+const Spacer = styled.div`
+  height: 20px;
 `;

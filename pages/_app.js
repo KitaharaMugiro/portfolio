@@ -1,7 +1,13 @@
 import "typeface-roboto";
-
+import ReactiveHeader from "../components/ReactiveHeader";
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <ReactiveHeader>
+        <Component {...pageProps} />
+      </ReactiveHeader>
+    </>
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for
