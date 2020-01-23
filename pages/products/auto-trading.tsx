@@ -1,3 +1,8 @@
+import { ProductList } from "../../contents/ProductList";
+
+const slug = "auto-trading";
 export default () => {
-  return "苦労したこと";
+  const product = ProductList.find(p => p.slug === slug);
+
+  return <div>{product?.name}</div>;
 };

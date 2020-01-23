@@ -1,19 +1,38 @@
-import { useRouter } from "next/router";
+import { useState } from "react";
+import ProductGrid from "../../components/ProductGrid";
+import { Tag } from "../../contents/ProductList";
+import TagCheckList from "../../components/TagCheckList";
+import TypeRadioList from "../../components/TypeRadioList";
+import styled from "styled-components";
 
-const ProductList = [{ name: "株式自動売買", slug: "auto-trading" }];
 export default () => {
-  const router = useRouter();
-  const renderProducts = () => {
-    return ProductList.map(product => {
-      return (
-        <div
-          key={product.slug}
-          onClick={() => router.push("/products/" + product.slug)}
-        >
-          {product.name}
-        </div>
-      );
-    });
+  const [filter, setFilter] = useState<Tag[]>([]);
+  const [type, setType] = useState("全て");
+  const [all, setAll] = useState(true);
+  const onCheck = (checked: { [key: string]: boolean }) => {
+    const keys = Object.keys(checked).filter(key => checked[key]) as Tag[];
+    setFilter(keys);
+    if (keys.length === 0) {
+      setAll(true);
+    } else {
+      setAll(false);
+    }
   };
-  return <div>{renderProducts()}</div>;
+
+  return (
+    <div>
+      <TypeRadioList type={type} onChangeType={type => setType(type)} />
+      <Spacer />
+      <TagCheckList
+        onCheck={onCheck}
+        all={all}
+        onClickAll={() => setAll(!all)}
+      />
+      <ProductGrid filter={filter} all={all} type={type} />
+    </div>
+  );
 };
+
+const Spacer = styled.div`
+  height: 20px;
+`;
