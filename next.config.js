@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
-  assetPrefix: "/portfolio"
+  assetPrefix: process.env.GITHUB_PAGES ? "/portfolio" : ""
 };
