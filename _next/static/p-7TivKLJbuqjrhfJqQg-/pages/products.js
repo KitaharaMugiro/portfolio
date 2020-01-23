@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{"3Hk6":function(n,o,u){"use strict";u.r(o),o.default=function(){return"products"}},OEIR:function(n,o,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/products",function(){return u("3Hk6")}])}},[["OEIR",0]]]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{"6jZI":function(n,o,i){(window.__NEXT_P=window.__NEXT_P||[]).push(["/profile",function(){return i("FSkX")}])},FSkX:function(n,o,i){"use strict";i.r(o),o.default=function(){return"profile"}}},[["6jZI",0]]]);
