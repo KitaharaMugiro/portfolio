@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{"/EDR":function(n,o,w){(window.__NEXT_P=window.__NEXT_P||[]).push(["/",function(){return w("23aj")}])},"23aj":function(n,o,w){"use strict";w.r(o),o.default=function(){return"Hello world!"}}},[["/EDR",0]]]);

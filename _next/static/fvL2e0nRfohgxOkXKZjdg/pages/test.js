@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"90RC":function(n,o,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/test",function(){return t("VOFc")}])},VOFc:function(n,o,t){"use strict";t.r(o),o.default=function(){return"hello world"}}},[["90RC",0]]]);
