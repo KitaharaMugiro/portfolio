@@ -21,6 +21,7 @@ export default () => {
     </div>
   );
 };
+
 const OriginalButton = styled.button`
   color: palevioletred;
   font-size: 1em;

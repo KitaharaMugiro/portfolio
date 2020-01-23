@@ -1,4 +1,8 @@
 import Test from "../components/Test";
 export default () => {
-  return <Test />;
+  return (
+    <div>
+      <Test />
+    </div>
+  );
 };
