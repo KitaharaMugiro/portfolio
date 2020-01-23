@@ -1,7 +1,6 @@
-require("dotenv").config();
-
 export function getPath(rawPath: string) {
-  console.log({ baseUrl: process.env.BASE_URL });
-  const baseUrl = process.env.BASE_URL || "";
+  const env = process.env.NODE_ENV;
+  console.log({ env });
+  const baseUrl = env ? "/portfolio" : "";
   return baseUrl + rawPath;
 }
