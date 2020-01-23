@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"3s6Z":function(n,o,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/test",function(){return t("vB6L")}])},vB6L:function(n,o,t){"use strict";t.r(o),o.default=function(){return"hello world"}}},[["3s6Z",0]]]);
