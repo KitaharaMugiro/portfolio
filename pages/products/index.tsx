@@ -1,22 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProductGrid from "../../components/ProductGrid";
-import { Tag } from "../../contents/ProductList";
+import { Tag, Product, ProductList } from "../../contents/ProductList";
 import TagCheckList from "../../components/TagCheckList";
 import TypeRadioList from "../../components/TypeRadioList";
 import styled from "styled-components";
 
 export default () => {
-  const [filter, setFilter] = useState<Tag[]>([]);
   const [type, setType] = useState("全て");
   const [all, setAll] = useState(true);
+  const [filter, setFilter] = useState<Tag[]>([]);
+  const [targetProduct, setTargetProduct] = useState<Product[]>(ProductList);
+  useEffect(() => {
+    const filterProducts = () => {
+      const products = ProductList.filter(product => {
+        if (all) return true;
+        if (filter.length === 0) return false;
+        let result = true;
+        filter.forEach(f => {
+          result = result && product.tags.includes(f);
+        });
+        return result;
+      }).filter(product => {
+        if (type === "全て") return true;
+        return type === product.type;
+      });
+      setTargetProduct(products);
+    };
+    filterProducts();
+  }, [type, all, filter]);
+
   const onCheck = (checked: { [key: string]: boolean }) => {
-    const keys = Object.keys(checked).filter(key => checked[key]) as Tag[];
-    setFilter(keys);
-    if (keys.length === 0) {
-      setAll(true);
-    } else {
-      setAll(false);
-    }
+    const filter = Object.keys(checked).filter(key => checked[key]) as Tag[];
+    let all = filter.length === 0;
+    setAll(all);
+    setFilter(filter);
   };
 
   return (
@@ -27,8 +44,9 @@ export default () => {
         onCheck={onCheck}
         all={all}
         onClickAll={() => setAll(!all)}
+        targetProducts={targetProduct}
       />
-      <ProductGrid filter={filter} all={all} type={type} />
+      <ProductGrid products={targetProduct} />
     </div>
   );
 };

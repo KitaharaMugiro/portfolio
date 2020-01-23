@@ -19,7 +19,7 @@ export default (props: Props) => {
   return (
     <Frame>
       <h3>タイプから絞り込む</h3>
-      <RadioGroup value={props.type} onChange={handleChange}>
+      <RadioGroup value={props.type} onChange={handleChange} row>
         <FormControlLabel value="全て" control={<Radio />} label="全て" />
         <FormControlLabel
           value={Type.work}

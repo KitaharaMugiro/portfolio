@@ -2,45 +2,30 @@ import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 import { getPath } from "../constants/utils";
-import { ProductList, Tag } from "../contents/ProductList";
+import { ProductList, Tag, Product } from "../contents/ProductList";
 
 interface Props {
-  filter: Tag[];
-  all: boolean;
-  type: string;
+  products: Product[];
 }
 
 export default (props: Props) => {
   const router = useRouter();
 
   const renderProducts = () => {
-    return ProductList.filter(product => {
-      if (props.all) return true;
-      if (props.filter.length === 0) return false;
-      let result = true;
-      props.filter.forEach(f => {
-        result = result && product.tags.includes(f);
-      });
-      return result;
-    })
-      .filter(product => {
-        if (props.type === "全て") return true;
-        return props.type === product.type;
-      })
-      .map(product => {
-        const url = `/products/${product.slug}`;
-        return (
-          <FeedView
-            key={product.slug}
-            onClick={() => router.push(url, getPath(url))}
-          >
-            <FeedImage src={getPath(`/image.png`)} />
-            <FeedTitleFrame>
-              <FeedTitle>{product.name}</FeedTitle>
-            </FeedTitleFrame>
-          </FeedView>
-        );
-      });
+    return props.products.map(product => {
+      const url = `/products/${product.slug}`;
+      return (
+        <FeedView
+          key={product.slug}
+          onClick={() => router.push(url, getPath(url))}
+        >
+          <FeedImage src={getPath(`/image.png`)} />
+          <FeedTitleFrame>
+            <FeedTitle>{product.name}</FeedTitle>
+          </FeedTitleFrame>
+        </FeedView>
+      );
+    });
   };
 
   return <Container>{renderProducts()}</Container>;

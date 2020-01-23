@@ -255,7 +255,7 @@ export const ProductList: Product[] = [
   }
 ];
 
-export function getTagList(productList: Product[], thresh: number = 2) {
+export function getTagList(productList: Product[], thresh: number = 1) {
   const map: { [key: string]: number } = {};
   productList.forEach(product => {
     product.tags.forEach(tag => {

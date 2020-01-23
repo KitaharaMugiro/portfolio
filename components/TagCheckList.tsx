@@ -2,15 +2,15 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormGroup from "@material-ui/core/FormGroup";
 import React from "react";
-import { getTagList, ProductList } from "../contents/ProductList";
-import { Paper, Typography } from "@material-ui/core";
 import styled from "styled-components";
 import { colors } from "../constants/colors";
+import { getTagList, Product } from "../contents/ProductList";
 
 interface Props {
   onCheck: (checked: any) => void;
   all: boolean;
   onClickAll: () => void;
+  targetProducts: Product[];
 }
 
 export default (props: Props) => {
@@ -26,7 +26,7 @@ export default (props: Props) => {
   };
 
   const renderCheckBoxs = () => {
-    return getTagList(ProductList).map(label => {
+    return getTagList(props.targetProducts).map(label => {
       const checked = state[label] || false;
       return (
         <FormControlLabel
