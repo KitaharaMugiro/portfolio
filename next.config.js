@@ -8,5 +8,5 @@ module.exports = {
     });
     return config;
   },
-  assetPrefix: process.env.GITHUB_PAGES ? "/portfolio" : ""
+  assetPrefix: process.env.BASE_URL || ""
 };

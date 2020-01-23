@@ -1,6 +1,6 @@
-import ProductList from "../../contents/products/ProductList";
 import { useRouter } from "next/router";
 
+const ProductList = [{ name: "株式自動売買", slug: "auto-trading" }];
 export default () => {
   const router = useRouter();
   const renderProducts = () => {
