@@ -22,6 +22,7 @@ import clsx from "clsx";
 import { useRouter } from "next/router";
 import React from "react";
 import { contents } from "../models/contents";
+import { getPath } from "../constants/utils";
 
 const drawerWidth = 240;
 const title = "Resume";
@@ -41,7 +42,7 @@ export default function PersistentDrawerLeft(props: any) {
             key={content.name}
             onClick={() => {
               setOpen(false);
-              router.push(content.link);
+              router.push(content.link, getPath(content.link));
             }}
           >
             <ListItemIcon>{content.icon()}</ListItemIcon>
@@ -79,7 +80,10 @@ export default function PersistentDrawerLeft(props: any) {
           >
             <MenuIcon />
           </IconButton>
-          <div style={{ cursor: "pointer" }} onClick={() => router.push("/")}>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => router.push("/", getPath("/"))}
+          >
             <Typography variant="h6" noWrap>
               {title}
             </Typography>

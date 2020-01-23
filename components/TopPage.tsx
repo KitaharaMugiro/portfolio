@@ -4,6 +4,7 @@ import { contents } from "../models/contents";
 import styled from "styled-components";
 import { colors } from "../constants/colors";
 import { catchcopy } from "../models/catchcopy";
+import { getPath } from "../constants/utils";
 
 export default () => {
   const router = useRouter();
@@ -16,7 +17,7 @@ export default () => {
             <Button
               variant="contained"
               color="primary"
-              onClick={() => router.push(content.link)}
+              onClick={() => router.push(content.link, getPath(content.link))}
             >
               {content.name}
             </Button>

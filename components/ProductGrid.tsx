@@ -1,9 +1,8 @@
 import { useRouter } from "next/router";
 import React from "react";
-import styled, { keyframes } from "styled-components";
-import { ProductList, Tag } from "../contents/ProductList";
-import products from "../pages/products";
+import styled from "styled-components";
 import { getPath } from "../constants/utils";
+import { ProductList, Tag } from "../contents/ProductList";
 
 interface Props {
   filter: Tag[];
@@ -29,10 +28,11 @@ export default (props: Props) => {
         return props.type === product.type;
       })
       .map(product => {
+        const url = `/products/${product.slug}`;
         return (
           <FeedView
             key={product.slug}
-            onClick={() => router.push("/products/" + product.slug)}
+            onClick={() => router.push(url, getPath(url))}
           >
             <FeedImage src={getPath(`/image.png`)} />
             <FeedTitleFrame>
