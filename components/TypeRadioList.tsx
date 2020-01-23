@@ -1,11 +1,9 @@
-import Checkbox from "@material-ui/core/Checkbox";
+import { Radio, RadioGroup } from "@material-ui/core";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormGroup from "@material-ui/core/FormGroup";
 import React from "react";
-import { getTagList, ProductList, Type } from "../contents/ProductList";
-import { Paper, Typography, RadioGroup, Radio } from "@material-ui/core";
 import styled from "styled-components";
 import { colors } from "../constants/colors";
+import { Type } from "../contents/ProductList";
 
 interface Props {
   type: string;

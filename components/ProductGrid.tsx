@@ -3,6 +3,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { ProductList, Tag } from "../contents/ProductList";
 import products from "../pages/products";
+import { getPath } from "../constants/utils";
 
 interface Props {
   filter: Tag[];
@@ -33,7 +34,7 @@ export default (props: Props) => {
             key={product.slug}
             onClick={() => router.push("/products/" + product.slug)}
           >
-            <FeedImage src="/image.png" />
+            <FeedImage src={getPath(`/image.png`)} />
             <FeedTitleFrame>
               <FeedTitle>{product.name}</FeedTitle>
             </FeedTitleFrame>
