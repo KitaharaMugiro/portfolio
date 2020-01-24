@@ -4,12 +4,12 @@ import { colors } from "../../constants/colors";
 import { getPath } from "../../constants/utils";
 import Chips from "../../components/Chips";
 
-const slug = "auto-trading";
-const architectImage = getPath("/auto-trading-architect.png");
+const slug = "ar-education";
+const architectImage = getPath("/ar-education-architecture.png");
 const description =
-  "株価の予測ができるか興味で始めたデータ分析から売買を最適化する方法を見つけて自動売買のプロダクトを作成した。どの学習モデルが予測に最適化検証している中で、全ての学習機を平均させたモデルが最も成績がよかったことからアンサンブル学習を基軸としたモデルを構成した。";
+  "ARを利用したプロダクトを3人チームで作成した。物理シミュレーションをARで再現し、より科学が身近に感じられるような教材を作成した。";
 const difficulty =
-  "①株価の上がり下がりを予測しようとしたが成果が全く出なかった。そこで「多数ある銘柄のうちどれを買うのが良いのか」を評価軸として教師データを作成した。 ②過去のデータで学習させ、未来のデータでフォワードテスト/バーチャル取引のテスト/実売買のテストを行った。利益で評価するとばらつきが大きくモデルがうまくいっているかの評価が難しかった。市場平均との差が一定してプラスであることを発見しそれを評価軸とした。";
+  "ARを使うことだけが条件でプロダクトの内容は自由に決定する必要があったのでテーマ決めに難航した。評価軸と評価軸の重みを議論し、ブレインストーミングで出した題材についてそれぞれの評価軸で採点することで得点化させて決定した。これによりなぜそれをやるのか、を説明することができた。";
 export default () => {
   const product = ProductList.find(p => p.slug === slug);
 
@@ -37,10 +37,6 @@ export default () => {
       ></Image>
       <HeaderLine>苦労したこと/どう乗り越えたか</HeaderLine>
       <Description>{difficulty}</Description>
-      <HeaderLine>詳細リンク</HeaderLine>
-      <Link href="https://qiita.com/yuno_miyako/items/1357684a7618e210c3c6">
-        Qiita「機械学習で株取引を半年してみた結果」
-      </Link>
     </Frame>
   );
 };

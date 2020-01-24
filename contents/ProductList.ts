@@ -50,7 +50,10 @@ export enum Tag {
   heroku = "heroku",
   netlify = "Netlify",
   websocket = "Websocket",
-  puppeteer = "Puppeteer"
+  puppeteer = "Puppeteer",
+  firebase = "Firebase",
+  realTimeDB = "RealTimeDB",
+  OAuth = "OAuth"
 }
 
 export enum Type {
@@ -88,18 +91,21 @@ export const ProductList: Product[] = [
     name: "DeepLearningによるjpeg画像の劣化復元",
     type: Type.intern,
     slug: "jpeg-resolution",
+    image: "/jpeg-resolution.jpg",
     tags: [Tag.machineLearning, Tag.python, Tag.deepLearning, Tag.solo]
   },
   {
     name: "ARを活用した教育アプリ",
     type: Type.intern,
     slug: "ar-education",
+    image: "/ar-education.png",
     tags: [Tag.swift, Tag.AR, Tag.physic, Tag.iOS, Tag.mobile, Tag.team]
   },
   {
     name: "TOEIC/英語学習アプリ abceed",
     type: Type.work,
     slug: "abceed",
+    image: "/abceed.png",
     tags: [
       Tag.swift,
       Tag.kotlin,
@@ -122,17 +128,17 @@ export const ProductList: Product[] = [
     name: "パンツシェアアプリ",
     type: Type.personal,
     slug: "panty-share",
+    image: "/panty-share.png",
     tags: [
       Tag.vue,
       Tag.twitter,
       Tag.SPA,
       Tag.serverless,
       Tag.webApp,
-      Tag.dynamo,
-      Tag.S3,
-      Tag.APIGateway,
-      Tag.lambda,
-      Tag.solo
+      Tag.solo,
+      Tag.firebase,
+      Tag.realTimeDB,
+      Tag.OAuth
     ]
   },
   {
