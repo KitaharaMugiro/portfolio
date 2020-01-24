@@ -64,6 +64,7 @@ export type Product = {
   slug: string;
   type: Type;
   tags: Tag[];
+  image?: string;
 };
 
 export const ProductList: Product[] = [
@@ -71,6 +72,7 @@ export const ProductList: Product[] = [
     name: "機械学習による株式売買の最適化/自動化",
     type: Type.personal,
     slug: "auto-trading",
+    image: "/auto-trading.png",
     tags: [
       Tag.machineLearning,
       Tag.python,
@@ -160,7 +162,7 @@ export const ProductList: Product[] = [
       Tag.redux,
       Tag.lambda,
       Tag.APIGateway,
-      Tag.team,
+      Tag.solo,
       Tag.highLoad,
       Tag.netlify
     ]
@@ -230,7 +232,7 @@ export const ProductList: Product[] = [
       Tag.heroku,
       Tag.TypeORM,
       Tag.CICD,
-      Tag.solo,
+      Tag.team,
       Tag.agile,
       Tag.speed
     ]

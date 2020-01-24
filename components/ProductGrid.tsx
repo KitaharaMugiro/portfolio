@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 import { getPath } from "../constants/utils";
-import { ProductList, Tag, Product } from "../contents/ProductList";
+import { Product } from "../contents/ProductList";
 
 interface Props {
   products: Product[];
@@ -19,7 +19,7 @@ export default (props: Props) => {
           key={product.slug}
           onClick={() => router.push(url, getPath(url))}
         >
-          <FeedImage src={getPath(`/image.png`)} />
+          <FeedImage src={getPath(product.image || "")} />
           <FeedTitleFrame>
             <FeedTitle>{product.name}</FeedTitle>
           </FeedTitleFrame>
