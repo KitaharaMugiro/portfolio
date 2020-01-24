@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST = (function(a){return {"/":[a],"/index":[a],"/products":[a],"/products/auto-trading":[a]}}("static\u002Fchunks\u002Fdfef4e8b54bacfb370079df8493978ea1e1e4278.119204a489c2c6390fae.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
