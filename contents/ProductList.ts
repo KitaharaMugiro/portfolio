@@ -145,6 +145,7 @@ export const ProductList: Product[] = [
     name: "宣伝アプリ あどあっぷ(1)",
     type: Type.personal,
     slug: "adapp1",
+    image: "/adapp1.png",
     tags: [
       Tag.react,
       Tag.twitter,
@@ -154,7 +155,8 @@ export const ProductList: Product[] = [
       Tag.lambda,
       Tag.APIGateway,
       Tag.team,
-      Tag.netlify
+      Tag.netlify,
+      Tag.OAuth
     ]
   },
   {
