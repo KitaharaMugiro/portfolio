@@ -5,7 +5,6 @@ import { getPath } from "../../constants/utils";
 import Chips from "../../components/Chips";
 
 const slug = "smartguide";
-const architectImage = getPath("/smartguide-architect.png");
 const description = "スマートフォンで観光地の音声ガイドを提供するサービス";
 const difficulty =
   "フルリモートによる業務であったが開発フローがしっかりしており問題が生じることはなかった。非エンジニアとの連携が難しく、スクリプトによる業務の自動化を浸透させることができなかった。";
@@ -29,11 +28,6 @@ export default () => {
       <Title>{product?.name}</Title>
       <Chips tags={product?.tags} />
       <Description>{description}</Description>
-      <HeaderLine>アーキテクチャ図(クリックで拡大)</HeaderLine>
-      <Image
-        src={architectImage}
-        onClick={() => (window.location.href = architectImage)}
-      ></Image>
       <HeaderLine>苦労したこと/どう乗り越えたか</HeaderLine>
       <Description>{difficulty}</Description>
       <HeaderLine>詳細リンク</HeaderLine>

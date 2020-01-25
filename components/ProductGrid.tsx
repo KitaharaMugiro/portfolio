@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { getPath } from "../constants/utils";
 import { Product } from "../contents/ProductList";
 
@@ -37,6 +37,17 @@ const Container = styled.div`
   flex-wrap: wrap;
 `;
 
+const slideUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 const FeedView = styled.div`
   width: 90vmin;
   height: 70vmin;
@@ -50,6 +61,9 @@ const FeedView = styled.div`
   filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.3));
   cursor: pointer;
   margin: 10px;
+
+  animation-name: ${slideUp};
+  animation-duration: 0.4s;
 `;
 
 const FeedImage = styled.img`

@@ -7,7 +7,7 @@ import Chips from "../../components/Chips";
 const slug = "campwill";
 const architectImage = getPath("/campwill-architect.png");
 const description =
-  "複数の予約サイトの登録されているキャンプ場の在庫と価格を同期させるシステム。また在庫数が減ってきた時に価格をあげるダイナミックプライシングも実装した。";
+  "複数の予約サイトの登録されているキャンプ場の在庫と価格を同期させるシステム。また在庫数が減ってきた時に自動で価格をあげるダイナミックプライシングを実装した。";
 const difficulty =
   "予約サイトの在庫や価格を変更するのにPuppeteerを採用したが、Puppeteerのメモリ使用量が大きく複数のリクエストを同時に捌くことができなかったためサービスを切り出し非同期化させた。";
 export default () => {

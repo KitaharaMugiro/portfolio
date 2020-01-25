@@ -4,8 +4,7 @@ import { colors } from "../../constants/colors";
 import { getPath } from "../../constants/utils";
 import Chips from "../../components/Chips";
 
-const slug = "smartguide";
-const architectImage = getPath("/smartguide-architect.png");
+const slug = "goal-achivement";
 const description =
   "毎日やりたいことを設定し、それが達成したかどうかを管理するアプリ。定期的な通知で確認をしてくれるのでサボりがちな自分のお尻を叩いてくれた。";
 const difficulty =
@@ -30,15 +29,12 @@ export default () => {
       <Title>{product?.name}</Title>
       <Chips tags={product?.tags} />
       <Description>{description}</Description>
-      <HeaderLine>アーキテクチャ図(クリックで拡大)</HeaderLine>
-      <Image
-        src={architectImage}
-        onClick={() => (window.location.href = architectImage)}
-      ></Image>
       <HeaderLine>苦労したこと/どう乗り越えたか</HeaderLine>
       <Description>{difficulty}</Description>
-      <HeaderLine>詳細リンク</HeaderLine>
-      <Link href="https://smartguide.net">Smartguide - スマートガイド</Link>
+      <HeaderLine>Github</HeaderLine>
+      <Link href="https://github.com/KitaharaMugiro/TaskManagerReactNative">
+        TaskManagerReactNative
+      </Link>
     </Frame>
   );
 };

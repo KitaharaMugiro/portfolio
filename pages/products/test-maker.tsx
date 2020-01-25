@@ -38,8 +38,10 @@ export default () => {
       <Description>{difficulty}</Description>
       <HeaderLine>詳細リンク</HeaderLine>
       <Link href="https://qiita.com/yuno_miyako/items/e772a0b2ef820059b22d">
-        インクリメンタルな開発によって5日でWebアプリをこさえた話【個人開発】
+        ・インクリメンタルな開発によって5日でWebアプリをこさえた話【個人開発】
       </Link>
+      <br />
+      <Link href="https://shiken-maker.herokuapp.com">・テストメーカー</Link>
     </Frame>
   );
 };

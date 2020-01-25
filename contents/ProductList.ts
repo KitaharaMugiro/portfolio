@@ -53,7 +53,8 @@ export enum Tag {
   puppeteer = "Puppeteer",
   firebase = "Firebase",
   realTimeDB = "RealTimeDB",
-  OAuth = "OAuth"
+  OAuth = "OAuth",
+  docker = "Docker"
 }
 
 export enum Type {
@@ -121,7 +122,8 @@ export const ProductList: Product[] = [
       Tag.cleanArchitecture,
       Tag.TDD,
       Tag.naturalLanguage,
-      Tag.automation
+      Tag.automation,
+      Tag.docker
     ]
   },
   {
@@ -163,6 +165,7 @@ export const ProductList: Product[] = [
     name: "抽選アプリ あどあっぷ(2)",
     type: Type.personal,
     slug: "adapp2",
+    image: "/adapp2.jpeg",
     tags: [
       Tag.react,
       Tag.twitter,
@@ -179,12 +182,14 @@ export const ProductList: Product[] = [
     name: "Change the world",
     type: Type.personal,
     slug: "changeTheWorld",
+    image: "/changeTheWorld.png",
     tags: [Tag.react, Tag.serverless, Tag.GCP, Tag.solo, Tag.speed]
   },
   {
     name: "予約サイトコントローラ Campwill",
     type: Type.work,
     slug: "campwill",
+    image: "/campwill.png",
     tags: [
       Tag.react,
       Tag.TypeScript,
@@ -205,6 +210,7 @@ export const ProductList: Product[] = [
     name: "スマホで音声ガイド smartguide",
     type: Type.work,
     slug: "smartguide",
+    image: "/smartguide.png",
     tags: [
       Tag.nuxt,
       Tag.vue,
@@ -225,12 +231,14 @@ export const ProductList: Product[] = [
     name: "自分用目標達成アプリ",
     type: Type.personal,
     slug: "goal-achivement",
+    image: "/goal-achivement.png",
     tags: [Tag.reactNative, Tag.mobile, Tag.TypeScript, Tag.agile]
   },
   {
     name: "テストメーカー",
     type: Type.personal,
     slug: "test-maker",
+    image: "/test-maker.png",
     tags: [
       Tag.react,
       Tag.webApp,
@@ -249,6 +257,7 @@ export const ProductList: Product[] = [
     name: "シェアサイクル",
     type: Type.personal,
     slug: "share-cycle",
+    image: "/share-cycle.jpg",
     tags: [
       Tag.react,
       Tag.webApp,
