@@ -8,16 +8,18 @@ export const Link = styled.a`
 `;
 
 export const Description = styled.h3`
-  color: rgba(255, 255, 255, 0.7);
+  color: ${colors.subTextBlack};
 `;
 
-export const HeaderLine = styled.h2``;
+export const HeaderLine = styled.h2`
+  margin-bottom: 5px;
+`;
 
 export const Image = styled.img`
-  height: 300px;
+  width: 100%;
+  cursor: pointer;
 `;
 
 export const Frame = styled.div`
-  background-color: ${colors.gray};
-  color: white;
+  background-color: ${colors.whiteColor};
 `;

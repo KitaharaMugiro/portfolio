@@ -37,5 +37,7 @@ const Container = styled.div`
   max-height: 700px;
   background-color: ${colors.whiteColor};
   border: 2px solid #000;
-  padding: 10px;
+  padding: 20px;
+  padding-bottom: 50px;
+  filter: drop-shadow(20px);
 `;

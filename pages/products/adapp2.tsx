@@ -23,7 +23,7 @@ export default () => {
 
   const renderImage = () => {
     if (product?.image) {
-      return <Image src={getPath(product.image)}></Image>;
+      return <Image src={getPath(product.image)} onClick={() => (window.location.href = "/products/" + slug)} ></Image>;
     }
   };
 
@@ -41,7 +41,7 @@ export default () => {
       <HeaderLine>アーキテクチャ図(クリックで拡大)</HeaderLine>
       <Image
         src={architectImage}
-        onClick={() => (window.location.href = architectImage)}
+        onClick={() => (window.location.href = "/products/" + slug)}
       ></Image>
       <HeaderLine>苦労したこと/どう乗り越えたか</HeaderLine>
       <Description>{difficulty}</Description>

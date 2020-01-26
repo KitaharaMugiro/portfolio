@@ -22,7 +22,7 @@ export default () => {
 
   const renderImage = () => {
     if (product?.image) {
-      return <Image src={getPath(product.image)}></Image>;
+      return <Image src={getPath(product.image)} onClick={() => (window.location.href = "/products/" + slug)} ></Image>;
     }
   };
 
