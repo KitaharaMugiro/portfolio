@@ -4,12 +4,18 @@ import { Tag, Product, ProductList } from "../../contents/ProductList";
 import TagCheckList from "../../components/TagCheckList";
 import TypeRadioList from "../../components/TypeRadioList";
 import styled from "styled-components";
+import ModalView from "../../components/ModalView";
+import Campwill from "./campwill";
+import { getComponentFromSlug } from "../../models/getComponentFromSlug";
 
 export default () => {
   const [type, setType] = useState("全て");
   const [all, setAll] = useState(true);
   const [filter, setFilter] = useState<Tag[]>([]);
   const [targetProduct, setTargetProduct] = useState<Product[]>(ProductList);
+  const [openModal, setOpenModal] = useState(false);
+  const [clickedProduct, setClickedProduct] = useState<Product>();
+
   useEffect(() => {
     const filterProducts = () => {
       const products = ProductList.filter(product => {
@@ -36,6 +42,18 @@ export default () => {
     setFilter(filter);
   };
 
+  const onClickProduct = (product: Product) => {
+    setClickedProduct(product);
+    setOpenModal(true);
+  };
+
+  const renderComponent = () => {
+    if (clickedProduct?.slug) {
+      return <div>{getComponentFromSlug(clickedProduct.slug)}</div>;
+    }
+    return <div></div>;
+  };
+
   return (
     <div>
       <TypeRadioList type={type} onChangeType={type => setType(type)} />
@@ -46,7 +64,10 @@ export default () => {
         onClickAll={() => setAll(!all)}
         targetProducts={targetProduct}
       />
-      <ProductGrid products={targetProduct} />
+      <ProductGrid products={targetProduct} onClickProduct={onClickProduct} />
+      <ModalView open={openModal} onClickClose={() => setOpenModal(false)}>
+        {renderComponent()}
+      </ModalView>
     </div>
   );
 };

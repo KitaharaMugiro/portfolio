@@ -3,6 +3,14 @@ import styled from "styled-components";
 import { colors } from "../../constants/colors";
 import { getPath } from "../../constants/utils";
 import Chips from "../../components/Chips";
+import {
+  Image,
+  Frame,
+  Title,
+  Description,
+  HeaderLine,
+  Link
+} from "../../components/ProductStyledComponents";
 
 const slug = "test-maker";
 const architectImage = getPath("/test-maker-architect.png");
@@ -20,7 +28,7 @@ export default () => {
 
   if (!product) {
     console.error("見つかりません");
-    return;
+    return <div></div>;
   }
 
   return (
@@ -45,24 +53,3 @@ export default () => {
     </Frame>
   );
 };
-
-const Title = styled.h1``;
-
-const Link = styled.a`
-  font-size: 20px;
-`;
-
-const Description = styled.h3`
-  color: rgba(255, 255, 255, 0.7);
-`;
-
-const HeaderLine = styled.h2``;
-
-const Image = styled.img`
-  height: 300px;
-`;
-
-const Frame = styled.div`
-  background-color: ${colors.gray};
-  color: white;
-`;

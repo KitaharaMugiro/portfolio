@@ -1,8 +1,14 @@
-import { ProductList } from "../../contents/ProductList";
-import styled from "styled-components";
-import { colors } from "../../constants/colors";
-import { getPath } from "../../constants/utils";
 import Chips from "../../components/Chips";
+import {
+  Description,
+  Frame,
+  HeaderLine,
+  Image,
+  Link,
+  Title
+} from "../../components/ProductStyledComponents";
+import { getPath } from "../../constants/utils";
+import { ProductList } from "../../contents/ProductList";
 
 const slug = "abceed";
 const architectImage = getPath("/abceed-architect.png");
@@ -21,7 +27,7 @@ export default () => {
 
   if (!product) {
     console.error("見つかりません");
-    return;
+    return <div></div>;
   }
 
   return (
@@ -42,24 +48,3 @@ export default () => {
     </Frame>
   );
 };
-
-const Title = styled.h1``;
-
-const Link = styled.a`
-  font-size: 20px;
-`;
-
-const Description = styled.h3`
-  color: rgba(255, 255, 255, 0.7);
-`;
-
-const HeaderLine = styled.h2``;
-
-const Image = styled.img`
-  height: 300px;
-`;
-
-const Frame = styled.div`
-  background-color: ${colors.gray};
-  color: white;
-`;

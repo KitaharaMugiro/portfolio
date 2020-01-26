@@ -6,18 +6,16 @@ import { Product } from "../contents/ProductList";
 
 interface Props {
   products: Product[];
+  onClickProduct: (product: Product) => void;
 }
 
 export default (props: Props) => {
-  const router = useRouter();
-
   const renderProducts = () => {
     return props.products.map(product => {
-      const url = `/products/${product.slug}`;
       return (
         <FeedView
           key={product.slug}
-          onClick={() => router.push(url, getPath(url))}
+          onClick={() => props.onClickProduct(product)}
         >
           <FeedImage src={getPath(product.image || "")} />
           <FeedTitleFrame>

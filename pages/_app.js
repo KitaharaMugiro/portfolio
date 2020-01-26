@@ -1,4 +1,6 @@
 import "typeface-roboto";
+import "react-vertical-timeline-component/style.min.css";
+
 import ReactiveHeader from "../components/ReactiveHeader";
 function MyApp({ Component, pageProps }) {
   return (

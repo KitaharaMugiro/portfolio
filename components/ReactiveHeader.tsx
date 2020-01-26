@@ -21,7 +21,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import clsx from "clsx";
 import { useRouter } from "next/router";
 import React from "react";
-import { contents } from "../models/contents";
+import { contents } from "../contents/contents";
 import { getPath } from "../constants/utils";
 
 const drawerWidth = 240;

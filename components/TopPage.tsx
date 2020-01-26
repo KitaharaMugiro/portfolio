@@ -1,6 +1,6 @@
 import { Button, Box } from "@material-ui/core";
 import { useRouter } from "next/router";
-import { contents } from "../models/contents";
+import { contents } from "../contents/contents";
 import styled from "styled-components";
 import { colors } from "../constants/colors";
 import { catchcopy } from "../models/catchcopy";

@@ -1,6 +1,5 @@
 import AccountBoxIcon from "@material-ui/icons/AccountBox";
 import WebIcon from "@material-ui/icons/Web";
-import TimelineIcon from "@material-ui/icons/Timeline";
 import Home from "@material-ui/icons/Home";
 
 export type content = {
@@ -22,12 +21,6 @@ export const contents: content[] = [
     name: "Products",
     link: "/products",
     icon: () => <WebIcon />,
-    displayAtHome: true
-  },
-  {
-    name: "History",
-    link: "/history",
-    icon: () => <TimelineIcon />,
     displayAtHome: true
   }
 ];
