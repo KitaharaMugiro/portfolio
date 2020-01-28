@@ -17,7 +17,7 @@ const architectImage = getPath("/share-cycle-architect.png");
 const description =
   "IoTを使わずにQRコードとスマートフォンだけでシェアサイクルを実現させた。QRコードの読み込みで解錠し、解錠せずに利用するとアラームが鳴ることで不正利用を防ぐ。";
 const difficulty =
-  "PoCを作成して公園内に配置して利用されるかをテストする予定だったが、公園の許可がおりず断念した。QRコードを読んでwebアプリケーションを起動しapple payで支払って即座に利用開始するUXを実現することができた。";
+  "PoCを作成して公園内に配置して利用されるかをテストする予定だったが、公園の許可がおりず断念した。QRコードを読んでwebアプリケーションを起動しapple payで支払って即座に利用開始するUXを実現したかった";
 export default () => {
   const product = ProductList.find(p => p.slug === slug);
 
