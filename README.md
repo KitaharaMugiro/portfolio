@@ -1,3 +1,3 @@
 # portfolio
 
-URL : https://kitaharamugiro.github.io/portfolio/
+URL : https://optimal-bivouac-234404.firebaseapp.com

@@ -95,3 +95,6 @@ samples/auto-generated/
 # secrets
 gh-pages.pub
 gh-pages
+
+# exported files
+out/
