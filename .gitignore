@@ -92,3 +92,4 @@ gh-pages
 # exported files
 out/
 node_modules/
+.firebase/
