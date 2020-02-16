@@ -46,7 +46,7 @@ export default (props: Props) => {
 
   return (
     <Frame>
-      <h3>タグから絞り込む</h3>
+      <TestH3>タグから絞り込む</TestH3>
       <FormGroup row>
         <FormControlLabel
           control={
@@ -68,4 +68,8 @@ const Frame = styled.div`
   padding: 15px;
   max-width: 1000px;
   background-color: ${colors.mediumColor};
+`;
+
+const TestH3 = styled.h3`
+  color: red;
 `;

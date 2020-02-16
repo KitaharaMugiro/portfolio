@@ -338,9 +338,9 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_17__["m
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPath", function() { return getPath; });
 function getPath(rawPath) {
-  var env = false;
-  var baseUrl = env ? "/portfolio" : "";
-  return baseUrl + rawPath;
+  // const env = process.env.NODE_ENV === "production";
+  // const baseUrl = env ? "/portfolio" : "";
+  return rawPath;
 }
 
 /***/ }),

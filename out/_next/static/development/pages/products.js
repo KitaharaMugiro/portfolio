@@ -653,9 +653,9 @@ var colors = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPath", function() { return getPath; });
 function getPath(rawPath) {
-  var env = false;
-  var baseUrl = env ? "/portfolio" : "";
-  return baseUrl + rawPath;
+  // const env = process.env.NODE_ENV === "production";
+  // const baseUrl = env ? "/portfolio" : "";
+  return rawPath;
 }
 
 /***/ }),
@@ -732,6 +732,7 @@ var Tag;
   Tag["realTimeDB"] = "RealTimeDB";
   Tag["OAuth"] = "OAuth";
   Tag["docker"] = "Docker";
+  Tag["GoogleAnalytics"] = "Google Analytics";
 })(Tag || (Tag = {}));
 
 var Type;
@@ -801,7 +802,7 @@ var ProductList = [{
   type: Type.work,
   slug: "smartguide",
   image: "/smartguide.png",
-  tags: [Tag.nuxt, Tag.vue, Tag.TypeScript, Tag.AWS, Tag.EC2, Tag.express, Tag.TypeORM, Tag.MySQL, Tag.TDD, Tag.agile, Tag.CICD, Tag.puppeteer, Tag.automation]
+  tags: [Tag.nuxt, Tag.vue, Tag.TypeScript, Tag.AWS, Tag.EC2, Tag.express, Tag.TypeORM, Tag.MySQL, Tag.TDD, Tag.agile, Tag.CICD, Tag.puppeteer, Tag.automation, Tag.GoogleAnalytics]
 }, {
   name: "自分用目標達成アプリ",
   type: Type.personal,
