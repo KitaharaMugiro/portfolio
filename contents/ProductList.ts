@@ -54,7 +54,8 @@ export enum Tag {
   firebase = "Firebase",
   realTimeDB = "RealTimeDB",
   OAuth = "OAuth",
-  docker = "Docker"
+  docker = "Docker",
+  GoogleAnalytics = "Google Analytics"
 }
 
 export enum Type {
@@ -224,7 +225,8 @@ export const ProductList: Product[] = [
       Tag.agile,
       Tag.CICD,
       Tag.puppeteer,
-      Tag.automation
+      Tag.automation,
+      Tag.GoogleAnalytics
     ]
   },
   {
