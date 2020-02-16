@@ -35,7 +35,6 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -86,15 +85,10 @@ sw.*
 # compiled sources
 .dist
 
-# temp files
-temp-files/
-temp-outputs/
-main/nuxt/static/s3mock/
-samples/auto-generated/
-
 # secrets
 gh-pages.pub
 gh-pages
 
 # exported files
 out/
+node_modules/
