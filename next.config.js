@@ -7,6 +7,6 @@ module.exports = {
       use: "raw-loader"
     });
     return config;
-  },
-  assetPrefix: process.env.BASE_URL || ""
+  }
+  // assetPrefix: process.env.BASE_URL || ""
 };

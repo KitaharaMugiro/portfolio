@@ -11,6 +11,7 @@ import smartguide from "../pages/products/smartguide";
 import goalAchivement from "../pages/products/goal-achivement";
 import testMaker from "../pages/products/test-maker";
 import shareCycle from "../pages/products/share-cycle";
+import agile from "../pages/products/agile";
 
 //ProductListに生やすと重くなりそうという謎懸念
 //あとProductListはReactに依存しないでいてほしいという願望
@@ -72,6 +73,10 @@ const SlugByComponentList: SlugByComponent[] = [
   {
     slug: "share-cycle",
     component: shareCycle
+  },
+  {
+    slug: "agile",
+    component: agile
   }
 ];
 
@@ -80,5 +85,5 @@ export function getComponentFromSlug(slug: string) {
   if (maybeComponet) {
     return <maybeComponet.component />;
   }
-  throw new Error("指定されたslugは存在しません");
+  throw new Error(`指定されたslug(${slug})は存在しません`);
 }

@@ -55,13 +55,14 @@ export enum Tag {
   realTimeDB = "RealTimeDB",
   OAuth = "OAuth",
   docker = "Docker",
-  GoogleAnalytics = "Google Analytics"
+  GoogleAnalytics = "Google Analytics",
+  consultant = "コンサルタント",
 }
 
 export enum Type {
   intern = "インターン",
   personal = "個人プロジェクト",
-  work = "業務"
+  work = "業務",
 }
 
 export type Product = {
@@ -86,22 +87,22 @@ export const ProductList: Product[] = [
       Tag.Selenium,
       Tag.scraping,
       Tag.solo,
-      Tag.automation
-    ]
+      Tag.automation,
+    ],
   },
   {
     name: "DeepLearningによるjpeg画像の劣化復元",
     type: Type.intern,
     slug: "jpeg-resolution",
     image: "/jpeg-resolution.jpg",
-    tags: [Tag.machineLearning, Tag.python, Tag.deepLearning, Tag.solo]
+    tags: [Tag.machineLearning, Tag.python, Tag.deepLearning, Tag.solo],
   },
   {
     name: "ARを活用した教育アプリ",
     type: Type.intern,
     slug: "ar-education",
     image: "/ar-education.png",
-    tags: [Tag.swift, Tag.AR, Tag.physic, Tag.iOS, Tag.mobile, Tag.team]
+    tags: [Tag.swift, Tag.AR, Tag.physic, Tag.iOS, Tag.mobile, Tag.team],
   },
   {
     name: "TOEIC/英語学習アプリ abceed",
@@ -124,8 +125,8 @@ export const ProductList: Product[] = [
       Tag.TDD,
       Tag.naturalLanguage,
       Tag.automation,
-      Tag.docker
-    ]
+      Tag.docker,
+    ],
   },
   {
     name: "パンツシェアアプリ",
@@ -141,8 +142,8 @@ export const ProductList: Product[] = [
       Tag.solo,
       Tag.firebase,
       Tag.realTimeDB,
-      Tag.OAuth
-    ]
+      Tag.OAuth,
+    ],
   },
   {
     name: "宣伝アプリ あどあっぷ(1)",
@@ -159,8 +160,8 @@ export const ProductList: Product[] = [
       Tag.APIGateway,
       Tag.team,
       Tag.netlify,
-      Tag.OAuth
-    ]
+      Tag.OAuth,
+    ],
   },
   {
     name: "抽選アプリ あどあっぷ(2)",
@@ -176,15 +177,15 @@ export const ProductList: Product[] = [
       Tag.APIGateway,
       Tag.solo,
       Tag.highLoad,
-      Tag.netlify
-    ]
+      Tag.netlify,
+    ],
   },
   {
     name: "Change the world",
     type: Type.personal,
     slug: "changeTheWorld",
     image: "/changeTheWorld.png",
-    tags: [Tag.react, Tag.serverless, Tag.GCP, Tag.solo, Tag.speed]
+    tags: [Tag.react, Tag.serverless, Tag.GCP, Tag.solo, Tag.speed],
   },
   {
     name: "予約サイトコントローラ Campwill",
@@ -204,8 +205,8 @@ export const ProductList: Product[] = [
       Tag.automation,
       Tag.TDD,
       Tag.CICD,
-      Tag.puppeteer
-    ]
+      Tag.puppeteer,
+    ],
   },
   {
     name: "スマホで音声ガイド smartguide",
@@ -226,15 +227,15 @@ export const ProductList: Product[] = [
       Tag.CICD,
       Tag.puppeteer,
       Tag.automation,
-      Tag.GoogleAnalytics
-    ]
+      Tag.GoogleAnalytics,
+    ],
   },
   {
     name: "自分用目標達成アプリ",
     type: Type.personal,
     slug: "goal-achivement",
     image: "/goal-achivement.png",
-    tags: [Tag.reactNative, Tag.mobile, Tag.TypeScript, Tag.agile]
+    tags: [Tag.reactNative, Tag.mobile, Tag.TypeScript, Tag.agile],
   },
   {
     name: "テストメーカー",
@@ -252,8 +253,8 @@ export const ProductList: Product[] = [
       Tag.CICD,
       Tag.team,
       Tag.agile,
-      Tag.speed
-    ]
+      Tag.speed,
+    ],
   },
   {
     name: "シェアサイクル",
@@ -271,15 +272,29 @@ export const ProductList: Product[] = [
       Tag.CICD,
       Tag.solo,
       Tag.agile,
-      Tag.websocket
-    ]
-  }
+      Tag.websocket,
+    ],
+  },
+  {
+    name: "アジャイル開発導入支援",
+    type: Type.work,
+    slug: "agile",
+    image: "/agile.png",
+    tags: [Tag.agile, Tag.consultant],
+  },
+  {
+    name: "トラベルスルー",
+    type: Type.work,
+    slug: "travel-thru",
+    image: "/travel-thru.png",
+    tags: [Tag.agile, Tag.next, Tag.iOS, Tag.mobile, Tag.webApp],
+  },
 ];
 
 export function getTagList(productList: Product[], thresh: number = 1) {
   const map: { [key: string]: number } = {};
-  productList.forEach(product => {
-    product.tags.forEach(tag => {
+  productList.forEach((product) => {
+    product.tags.forEach((tag) => {
       if (map[tag]) {
         map[tag] += 1;
       } else {
