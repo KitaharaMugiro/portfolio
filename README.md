@@ -1,3 +1,3 @@
 # portfolio
 
-URL : https://optimal-bivouac-234404.firebaseapp.com
+URL : https://d3ftisula16vq0.cloudfront.net/
